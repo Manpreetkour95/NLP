@@ -239,7 +239,168 @@
     "text": "Foreign Exchange JP Morgan / Goldman Sachs\nExecute the foreign exchange transactions for JP Morgan and Goldman Sachs.",
     "output": ["JP Morgan", "Goldman Sachs"]
   }
+,  {
+    "text": "Loan Confirmation for ABC Corp\nPlease confirm the loan details for ABC Corp.",
+    "output": ["ABC Corp"]
+  },
+  {
+    "text": "External XYZ Ltd Cheque Request\nRequest an external cheque for XYZ Ltd.",
+    "output": ["XYZ Ltd"]
+  },
+  {
+    "text": "Closing Package for Acme Co\nPrepare the closing package for Acme Co.",
+    "output": ["Acme Co"]
+  },
+  {
+    "text": "DEF Inc AA 67698\nVerify the details for DEF Inc AA 67698.",
+    "output": ["DEF Inc"]
+  },
+  {
+    "text": "Loan Confirmation for Tesla Motors\nPlease confirm the loan details for Tesla Motors.",
+    "output": ["Tesla Motors"]
+  },
+  {
+    "text": "External Apple Inc Cheque Request\nRequest an external cheque for Apple Inc.",
+    "output": ["Apple Inc"]
+  },
+  {
+    "text": "Closing Package for Google LLC\nPrepare the closing package for Google LLC.",
+    "output": ["Google LLC"]
+  },
+  {
+    "text": "Facebook AA 67698\nVerify the details for Facebook AA 67698.",
+    "output": ["Facebook"]
+  },
+  {
+    "text": "Loan Confirmation for Microsoft\nPlease confirm the loan details for Microsoft.",
+    "output": ["Microsoft"]
+  },
+  {
+    "text": "External Amazon Cheque Request\nRequest an external cheque for Amazon.",
+    "output": ["Amazon"]
+  },
+  {
+    "text": "Closing Package for Twitter\nPrepare the closing package for Twitter.",
+    "output": ["Twitter"]
+  },
+  {
+    "text": "Snapchat AA 089698\nVerify the details for Snapchat AA 67698.",
+    "output": ["Snapchat"]
+  },
+  {
+    "text": "Loan Confirmation for IBM\nPlease confirm the loan details for IBM.",
+    "output": ["IBM"]
+  },
+  {
+    "text": "External Oracle Cheque Request\nRequest an external cheque for Oracle.",
+    "output": ["Oracle"]
+  },
+  {
+    "text": "Closing Package for SAP\nPrepare the closing package for SAP.",
+    "output": ["SAP"]
+  },
+  {
+    "text": "LinkedIn AA 60698\nVerify the details for LinkedIn AA 67698.",
+    "output": ["LinkedIn"]
+  },
+  {
+    "text": "Loan Confirmation for Adobe Systems\nPlease confirm the loan details for Adobe Systems.",
+    "output": ["Adobe Systems"]
+  },
+  {
+    "text": "External Spotify Cheque Request\nRequest an external cheque for Spotify.",
+    "output": ["Spotify"]
+  },
+  {
+    "text": "Closing Package for Pandora Media\nPrepare the closing package for Pandora Media.",
+    "output": ["Pandora Media"]
+  },
+  {
+    "text": "Uber Technologies AA 787698\nVerify the details for Uber Technologies AA 67698.",
+    "output": ["Uber Technologies"]
+  },
+  {
+    "text": "Loan Confirmation for ABC Corp\nPlease confirm the loan details for ABC Corp.",
+    "output": ["ABC Corp"]
+  },
+  {
+    "text": "External XYZ Ltd Cheque Request\nRequest an external cheque for XYZ Ltd.",
+    "output": ["XYZ Ltd"]
+  },
+  {
+    "text": "Closing Package for Acme Co\nPrepare the closing package for Acme Co.",
+    "output": ["Acme Co"]
+  },
+  {
+    "text": "DEF Inc\nVerify the details for DEF Inc.",
+    "output": ["DEF Inc"]
+  },
+  {
+    "text": "Loan Confirmation for Tesla Motors\nPlease confirm the loan details for Tesla Motors.",
+    "output": ["Tesla Motors"]
+  },
+  {
+    "text": "External Apple Inc Cheque Request\nRequest an external cheque for Apple Inc.",
+    "output": ["Apple Inc"]
+  },
+  {
+    "text": "Closing Package for Google LLC\nPrepare the closing package for Google LLC.",
+    "output": ["Google LLC"]
+  },
+  {
+    "text": "Facebook\nVerify the details for Facebook.",
+    "output": ["Facebook"]
+  },
+  {
+    "text": "Loan Confirmation for Microsoft\nPlease confirm the loan details for Microsoft.",
+    "output": ["Microsoft"]
+  },
+  {
+    "text": "External Amazon Cheque Request\nRequest an external cheque for Amazon.",
+    "output": ["Amazon"]
+  },
+  {
+    "text": "Closing Package for Twitter\nPrepare the closing package for Twitter.",
+    "output": ["Twitter"]
+  },
+  {
+    "text": "Snapchat\nVerify the details for Snapchat.",
+    "output": ["Snapchat"]
+  },
+  {
+    "text": "Loan Confirmation for IBM\nPlease confirm the loan details for IBM.",
+    "output": ["IBM"]
+  },
+  {
+    "text": "External Oracle Cheque Request\nRequest an external cheque for Oracle.",
+    "output": ["Oracle"]
+  },
+  {
+    "text": "Closing Package for SAP\nPrepare the closing package for SAP.",
+    "output": ["SAP"]
+  },
+  {
+    "text": "LinkedIn\nVerify the details for LinkedIn.",
+    "output": ["LinkedIn"]
+  },
+  {
+    "text": "Loan Confirmation for Adobe Systems\nPlease confirm the loan details for Adobe Systems.",
+    "output": ["Adobe Systems"]
+  },
+  {
+    "text": "External Spotify Cheque Request\nRequest an external cheque for Spotify.",
+    "output": ["Spotify"]
+  },
+  {
+    "text": "Closing Package for Pandora Media\nPrepare the closing package for Pandora Media.",
+    "output": ["Pandora Media"]
+  },
+  {
+    "text": "Uber Technologies\nVerify the details for Uber Technologies.",
+    "output": ["Uber Technologies"]
+  }
 ]
+
 
 
 
