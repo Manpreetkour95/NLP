@@ -1,0 +1,20 @@
+answers = ['corporate', 'lending services', 'AMC Inc.']
+
+# Define the pairs of substrings to check for
+substrings_to_exclude = [
+    ('lending', 'service'),
+    ('small', 'business'),
+    ('global', 'operation'),
+]
+
+def should_exclude(answer, substrings):
+    # Check if any pair of substrings is present in the answer
+    for substr1, substr2 in substrings:
+        if substr1 in answer and substr2 in answer:
+            return True
+    return False
+
+# Filter out answers that contain any of the pairs of substrings
+filtered_answers = [answer for answer in answers if not should_exclude(answer, substrings_to_exclude)]
+
+print(filtered_answers)
