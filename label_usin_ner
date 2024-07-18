@@ -1,0 +1,48 @@
+from transformers import AutoTokenizer, AutoModelForTokenClassification
+from transformers import pipeline
+
+# Load the tokenizer and model
+model_name = "xlm-roberta-large-finetuned-conll03-english"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForTokenClassification.from_pretrained(model_name)
+
+# Create the NER pipeline
+ner_pipeline = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple")
+
+# Sample text for predictions
+texts = [" Microsoft./Apple Inc is a good company", "Apple is headquartered in Cupertino."]
+
+# Get predictions
+predictions = ner_pipeline(texts)
+
+def align_predictions(texts, predictions, tokenizer):
+    aligned_data = []
+    for text, prediction in zip(texts, predictions):
+        tokens = tokenizer.tokenize(text)
+        token_predictions = ['O'] * len(tokens)
+        
+        for i in range(len(prediction)):
+            start_idx = prediction[i]['start']
+            end_idx = prediction[i]['end']
+            label = prediction[i]['entity_group']
+            print(start_idx)
+            # Find the subwords corresponding to the entity
+            entity_tokens = tokenizer.tokenize(text[start_idx:end_idx])
+            entity_length = len(entity_tokens)
+            
+            # Get the start position of the entity in the token list
+            token_start_idx = len(tokenizer.tokenize(text[:start_idx]))
+            
+            # Label the tokens
+            for i in range(entity_length):
+                token_predictions[token_start_idx + i] = label
+        
+        # Combine subwords to form the original tokens
+        original_tokens = tokenizer.convert_ids_to_tokens(tokenizer(text)['input_ids'])
+        aligned_tokens = [token.replace('▁', '') for token in original_tokens if token != tokenizer.pad_token]
+        
+        aligned_data.append((aligned_tokens, token_predictions))
+    return aligned_data
+
+aligned_predictions = align_predictions(texts, predictions, tokenizer)
+aligned_predictions 
