@@ -1,0 +1,45 @@
+def add_numbers_to_org(texts, predictions):
+    import re
+    
+    modified_predictions = []
+    
+    for text, prediction in zip(texts, predictions):
+        modified_pred = []
+        for entity in prediction:
+            if entity['entity_group'] == 'ORG':
+                # Check for number preceding the ORG entity
+                start_idx = entity['start']
+                number_match = re.search(r'\b\d+\b', text[:start_idx])
+                
+                if number_match:
+                    # Check if the number is right before the ORG entity
+                    number_start, number_end = number_match.span()
+                    if text[number_end:start_idx].isspace():
+                        # Update the entity to include the number
+                        entity['start'] = number_start
+                        entity['word'] = text[number_start:entity['end']]
+            
+            modified_pred.append(entity)
+        
+        modified_predictions.append(modified_pred)
+    
+    return modified_predictions
+
+# Example usage
+texts = ["Microsoft./Apple Inc is a good company", "545464 ontario inc"]
+predictions = [
+    [
+        {'entity_group': 'ORG', 'score': 0.9999956, 'word': 'Microsoft', 'start': 1, 'end': 10},
+        {'entity_group': 'ORG', 'score': 0.9999323, 'word': '/Apple Inc', 'start': 11, 'end': 21}
+    ],
+    [
+        {'entity_group': 'ORG', 'score': 0.9895101, 'word': 'ontario inc', 'start': 7, 'end': 18}
+    ]
+]
+
+modified_predictions = add_numbers_to_org(texts, predictions)
+
+for i, (text, preds) in enumerate(zip(texts, modified_predictions)):
+    print(f"Text {i+1}: {text}")
+    for pred in preds:
+        print(pred)
